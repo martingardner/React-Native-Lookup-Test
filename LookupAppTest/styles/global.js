@@ -25,7 +25,11 @@ const globalStyles = StyleSheet.create({
         color: '#000'
     },
     textButton : {
-        fontSize: 24
+        fontSize: 24,
+        fontWeight: '700'
+    },
+    marginTop20 : {
+        marginTop: 20
     }
 });
 

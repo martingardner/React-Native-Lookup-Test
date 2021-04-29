@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Login from './screens/Login';
+import Lookup from './screens/Lookup';
 
 const Stack = createStackNavigator();
 
@@ -26,9 +27,15 @@ const App = () => {
           options={{
             headerShown : false
           }}
-        >
-
-        </Stack.Screen>
+        />
+        
+        <Stack.Screen 
+          name="Lookup"
+          component={Lookup}
+          options={{
+            headerShown : false
+          }}
+        />
 
 
       </Stack.Navigator>
