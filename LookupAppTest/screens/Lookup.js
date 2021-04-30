@@ -7,7 +7,6 @@ import lookupStyles from '../styles/lookup';
 import SearchParams from '../components/SearchParams';
 
 const Lookup = ({route}) => {
-    console.log('route.params.data', route);
     const data = route.params.data || [];
 
     const [getUserData, setUserData] = useState(data);

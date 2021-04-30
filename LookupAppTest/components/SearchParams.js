@@ -1,23 +1,26 @@
 import React from 'react';
 import { View , Text } from 'react-native';
 
+import globalStyles from '../styles/global';
+import searchParamsStyles from '../styles/searchparams';
+
+
 const SearchParams = ({paramData}) => {
-    console.log('paramData', paramData);
     const data = paramData[0];
 
     return (
-        <View>
-            <View>
-                <Text>ID</Text>
-                <Text>{data.id}</Text>
+        <View style={globalStyles.marginTop20}>
+            <View style={searchParamsStyles.dataRow}>
+                <Text style={searchParamsStyles.dataRowLabel}>ID</Text>
+                <Text style={searchParamsStyles.dataRowData}>{data.id}</Text>
             </View>
-            <View>
-                <Text>Name</Text>
-                <Text>{data.name}</Text>
+            <View style={searchParamsStyles.dataRow}>
+                <Text style={searchParamsStyles.dataRowLabel}>Name</Text>
+                <Text style={searchParamsStyles.dataRowData}>{data.name}</Text>
             </View>
-            <View>
-                <Text>User Name</Text>
-                <Text>{data.username}</Text>
+            <View style={[searchParamsStyles.dataRow, searchParamsStyles.borderBottom]}>
+                <Text style={searchParamsStyles.dataRowLabel}>User Name</Text>
+                <Text style={searchParamsStyles.dataRowData}>{data.username}</Text>
             </View>
         </View>
     )
